@@ -1,16 +1,40 @@
-# React + Vite
+# 🌐 WikiSense — React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+WikiSense is a simple and fast **Wikipedia Search App** built using **React** and **Vite**.  
+It allows users to search and read summarized Wikipedia articles instantly through a clean and responsive interface.
 
-Currently, two official plugins are available:
+## 🚀 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- 🔍 Real-time Wikipedia search using the official Wikipedia API  
+- ⚡ Fast performance powered by Vite  
+- 🎨 Clean dark-themed UI with smooth transitions (pure CSS)  
+- 💬 Easy to extend with features like voice or face recognition  
 
-## React Compiler
+## 🛠️ Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Frontend:** React (Vite)
+- **Styling:** CSS (no frameworks)
+- **API:** Wikipedia REST API
+- **Version Control:** Git + GitHub
 
-## Expanding the ESLint configuration
+##  Clone the repository:
+   git clone https://github.com/xNikhilx1/wikisense.git
+🧩 Folder Structure
+pgsql
+Copy code
+wikisense/
+├── public/
+├── src/
+│   ├── components/
+│   ├── services/
+│   ├── App.jsx
+│   ├── main.jsx
+│   ├── index.css
+│   └── assets/
+├── package.json
+└── vite.config.js
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 👨‍💻 Author
+Nikhil
+GitHub: xNikhilx1
+

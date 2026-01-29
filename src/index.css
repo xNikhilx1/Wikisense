@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
 
+/* ================== GLOBAL ================== */
 body {
   font-family: 'Poppins', sans-serif;
   background-color: #000000;
@@ -10,13 +11,38 @@ body {
   animation: pageFadeIn 1s ease-in-out;
 }
 
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, rgba(255,255,255,0.03), #000 80%);
+  z-index: -1;
+}
+
+/* ================== CONTAINER ================== */
 .container {
-  max-width: 900px;
+  max-width: 1100px;
   margin: 50px auto;
   padding: 20px;
   animation: containerFadeIn 1s ease-in-out;
 }
 
+/* ================== HEADER ================== */
+.header h1 {
+  margin: 0;
+  font-size: 36px;
+  font-weight: 700;
+}
+
+.header .small {
+  color: #aaa;
+  margin-top: 5px;
+}
+
+/* ================== SEARCH ================== */
 .search-input {
   width: 70%;
   padding: 14px;
@@ -34,6 +60,7 @@ body {
   transform: scale(1.02);
 }
 
+/* ================== BUTTONS ================== */
 .btn {
   padding: 14px 20px;
   margin-left: 10px;
@@ -51,38 +78,48 @@ body {
   box-shadow: 0px 0px 20px rgba(255, 95, 109, 0.6);
 }
 
+/* ================== ARTICLE CARD ================== */
 .card {
   background-color: #1a1a1a;
   padding: 20px;
-  margin-top: 25px;
-  border-radius: 14px;
-  box-shadow: 0px 6px 25px rgba(255, 255, 255, 0.1);
+  margin-top: 30px;
+  border-radius: 16px;
+  box-shadow: 0px 8px 30px rgba(255, 255, 255, 0.12);
   opacity: 0;
   transform: translateY(20px);
   animation: cardSlideUp 0.6s forwards;
-  animation-delay: 0.2s;
 }
 
+/* ===== IMAGE (FIXED & BIG) ===== */
 .card img.thumb {
   width: 100%;
-  max-height: 220px;
-  object-fit: cover;
-  border-radius: 10px;
-  transition: transform 0.3s ease;
+  height: 360px;              /* BIG image */
+  object-fit: contain;        /* FULL image visible */
+  background-color: #000;
+  border-radius: 12px;
+  transition: transform 0.4s ease;
 }
 
 .card img.thumb:hover {
-  transform: scale(1.05);
+  transform: scale(1.03);
 }
 
+/* ================== CARD TEXT ================== */
 .card h2 {
-  margin: 10px 0 5px 0;
+  margin: 15px 0 8px;
   color: #ffc371;
   font-weight: 700;
 }
 
-.card p, .card a {
+.card p {
   color: #ddd;
+  line-height: 1.6;
+}
+
+.card a {
+  color: #ffc371;
+  text-decoration: none;
+  font-weight: 600;
 }
 
 .card a:hover {
@@ -90,10 +127,17 @@ body {
   text-decoration: underline;
 }
 
-@media (max-width: 600px) {
+/* ================== SMALL TEXT ================== */
+.small {
+  color: #aaa;
+  font-size: 14px;
+}
+
+/* ================== RESPONSIVE ================== */
+@media (max-width: 768px) {
   .search-input {
     width: 100%;
-    margin-bottom: 10px;
+    margin-bottom: 12px;
   }
 
   .btn {
@@ -103,19 +147,21 @@ body {
   }
 
   .card img.thumb {
-    max-height: 150px;
+    height: 260px;
   }
 }
 
-body::before {
-  content: '';
-  position: fixed;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  background: radial-gradient(circle, rgba(255,255,255,0.02), #000 80%);
-  z-index: -1;
+@media (max-width: 480px) {
+  .header h1 {
+    font-size: 28px;
+  }
+
+  .card img.thumb {
+    height: 220px;
+  }
 }
 
+/* ================== ANIMATIONS ================== */
 @keyframes cardSlideUp {
   to {
     opacity: 1;
@@ -124,11 +170,21 @@ body::before {
 }
 
 @keyframes pageFadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 @keyframes containerFadeIn {
-  from { opacity: 0; transform: translateY(10px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
